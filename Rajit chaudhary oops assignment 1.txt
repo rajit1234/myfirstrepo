@@ -1,0 +1,220 @@
+1) Write a program in C++ to add two numbers accept through keyboard.
+
+
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num1 , num2 , sum;
+    cout<<"Enter number one:\n";
+    cin>>num1;
+    cout<<"Enter number two :\n";
+    cin>>num2;
+    sum = num1 + num2;
+    cout<< "sum of two number is\n"<<sum;
+ return 0;   
+}
+
+2) Write a program in C++ to find Size of fundamental data types.
+
+
+
+#include <iostream>
+using namespace std;
+int main(){
+    cout<<"size of int is "<< sizeof(int)<<" bytes\n";
+    cout<<"size of char is "<< sizeof(char)<<" bytes\n";
+    cout<<"size of float is "<< sizeof(float)<<" bytes\n";
+    cout<<"size of bool is "<< sizeof(bool)<<" bytes\n";
+    cout<<"size of double is " << sizeof(double)<<" bytes\n";
+    cout <<"size of long double is "<< sizeof(long double)<<" bytes\n";
+    cout <<"size of long is "<< sizeof(long) << " bytes\n" ;
+    cout <<"size of long long is " << sizeof(long long)<< " bytes\n";
+    cout <<"size of short is "<< sizeof(short) <<" bytes\n" ;
+ return 0;   
+    }
+
+3)Write a program in C++ to display the operation of pre and post increment and decrement.
+
+
+
+
+#include <iostream>
+using namespace std;
+int main(){
+      int a=10,x;
+      x=++a; 
+      cout<<"value of x"<<x;//11
+      cout<<"pre increment"<<a;//11
+      x=a++;
+      cout<<"value of x"<<x;//11
+      cout<<"post increment"<<a;//12
+      x=--a;
+      cout<<"value of x"<<x;//11
+      cout<<"pre decrement"<<a;//11
+      x=a--;
+      cout<<"value of x"<<x;//11
+      cout<<"post decrement"<<a;//10
+}
+
+4)Write a program in C++ to swap two numbers using third variable.
+
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a=20,b=25,c;
+    cout<<" before swap\n"<<a<<b;
+    c=a+b;//45
+    a=c-a;//25
+    b=c-b;//20
+    cout<<"\nafter swap"<<a <<b;
+}
+
+
+
+5)
+Write a program in C++ which swap the values of two variables not using third variable.
+
+
+
+#include <iostream>
+using namespace std;
+int main (){
+       int a = 20 , b = 25 ;
+       cout<<"before swap a"<< a <<"before swap b"<<b;
+       a = a+b;
+       b = a-b;
+       a = a-b;
+       cout<<"after swap a"<<a<<"after swap b"<<b; 
+  return 0;     
+
+}
+
+6)Write a C++ program to check if a given positive number is a multiple of 3 or a multiple of 7.
+
+
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout<<"Enter the number";
+    cin>>num;
+    /*if (num%3==0)
+    {
+    cout<<"number is a multiple of 3";
+    }
+    else if (num%7==0)
+    {
+    cout<<"number is a multiple of 7";
+    }*/
+
+    if (num%3==num%7)
+    {
+    cout<<"number is a multiple of 3 or 7";
+    }
+    
+    else{
+        cout<<"number is not a multiple of 3 or 7";
+    }
+    
+}
+
+7)Write a C++ program to check the largest number among three given integers.
+
+#include <iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout<<"Enter the value of a,b,c";
+    cin>>a;
+    cin>>b;
+    cin>>c;
+    if (a>b)
+    {
+        if (a>c)
+        {
+            cout<<"A is the largest number";
+        }
+        
+    }
+    else if (b>c)
+    {
+        if (b>a)
+        {
+            cout<<"B is the largest number";
+
+        }
+        
+    }
+    else{
+        cout<<"C is the largest number";
+    }
+    
+}
+
+8)Write a program in C++ to find the factorial of a number.
+
+
+#include <iostream>
+using namespace std;
+int main(){
+    int n,i,f=1;
+    cout<<"Enter the number";
+    cin>>n;
+    for ( i=n;i>0; i--)
+    {
+        f=f*i;
+    }
+    cout<<"the factorial is "<<f;
+     
+         
+}
+
+9)Write a program in C++ to find the sum of digits of a given number.
+
+
+#include <iostream>
+using namespace std;  
+int main()  
+{  
+int n,sum=0,m;    
+cout<<"Enter a number: ";    
+cin>>n;    
+while(n>0)    
+{    
+m=n%10;    
+sum=sum+m;    
+n=n/10;    
+}    
+cout<<"Sum is= "<<sum;    
+return 0;  
+}  
+
+
+10)Write a program in C++ to calculate the sum of the series (1*1) + (2*2) + (3*3) + (4*4) + (5*5) + ... + (n*n).
+
+
+
+#include<iostream>
+using namespace std;
+ 
+// Function to calculate the following series
+int Series(int n)
+{
+    int i;
+    int sums = 0;
+    for (i = 1; i <= n; i++)
+        sums += (i * i);
+    return sums;
+}
+ 
+// Driver Code
+int main()
+{
+    int n = 3;
+    int res = Series(n);
+    cout<<res<<endl;
+}
